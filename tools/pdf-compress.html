@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="tools.compress.title">PDF 压缩</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <nav>
+        <a href="../index.html" class="logo">⚡ PDFTools</a>
+        <div class="nav-controls"><select id="language-selector"></select></div>
+    </nav>
+    <main>
+        <div class="hero">
+            <h1 data-i18n="tools.compress.title">PDF 压缩</h1>
+            <p data-i18n="tools.compress.desc">在保持画质清晰的同时大幅减小文件体积。</p>
+        </div>
+        <div class="workspace">
+            <div class="file-input-container">
+                <input type="file" id="file-upload" accept=".pdf" style="display: none;">
+                <button class="btn" onclick="document.getElementById('file-upload').click()">
+                    <span data-i18n="ui.select_file">选择文件</span>
+                </button>
+                <p style="margin-top: 10px; color: var(--text-light);" data-i18n="ui.drag_drop">或将文件拖放到此处</p>
+                <p id="file-name-display" style="font-weight: bold; margin-top: 1rem;"></p>
+            </div>
+            <button id="action-btn" class="btn" disabled data-i18n="ui.compress">开始压缩</button>
+            <div class="process-area">
+                <p style="margin-bottom: 0.5rem;">[模拟预览区域：压缩等级选择 (高/中/低)]</p>
+                <div class="progress-bar"><div class="progress-fill"></div></div>
+                <div class="success-msg"></div>
+                <button id="download-btn" class="btn" style="display: none;" data-i18n="ui.download">下载文件</button>
+            </div>
+        </div>
+    </main>
+    <footer><div id="disclaimer-text" class="disclaimer"></div></footer>
+    <script src="../i18n.js"></script><script src="../script.js"></script>
+    <script>
+        // Populate language selector for tool pages
+        document.addEventListener('DOMContentLoaded', () => {
+            const selector = document.getElementById('language-selector');
+            for (const lang in i18nData) {
+                const option = document.createElement('option');
+                option.value = lang;
+                option.textContent = i18nData[lang].nav_home; 
+                selector.appendChild(option);
+            }
+        });
+    </script>
+</body>
+</html>
