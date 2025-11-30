@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="tools.split.title">PDF 拆分</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <nav>
+        <a href="../index.html" class="logo">⚡ PDFTools</a>
+        <div class="nav-controls"><select id="language-selector"></select></div>
+    </nav>
+    <main>
+        <div class="hero">
+            <h1 data-i18n="tools.split.title">PDF 拆分</h1>
+            <p data-i18n="tools.split.desc">提取特定页面或将 PDF 分割为多个文件。</p>
+        </div>
+        <div class="workspace">
+            <div class="file-input-container">
+                <input type="file" id="file-upload" accept=".pdf" style="display: none;">
+                <button class="btn" onclick="document.getElementById('file-upload').click()">
+                    <span data-i18n="ui.select_file">选择文件</span>
+                </button>
+                <p style="margin-top: 10px; color: var(--text-light);" data-i18n="ui.drag_drop">或将文件拖放到此处</p>
+                <p id="file-name-display" style="font-weight: bold; margin-top: 1rem;"></p>
+            </div>
+            <button id="action-btn" class="btn" disabled data-i18n="ui.split">拆分文档</button>
+            <div class="process-area">
+                <p style="margin-bottom: 0.5rem;">[模拟预览区域：页码选择器，例如 '1-5, 8, 10-12']</p>
+                <div class="progress-bar"><div class="progress-fill"></div></div>
+                <div class="success-msg"></div>
+                <button id="download-btn" class="btn" style="display: none;" data-i18n="ui.download">下载文件</button>
+            </div>
+        </div>
+    </main>
+    <footer><div id="disclaimer-text" class="disclaimer"></div></footer>
+    <script src="../i18n.js"></script><script src="../script.js"></script>
+    <script>
+        // Populate language selector for tool pages
+        document.addEventListener('DOMContentLoaded', () => {
+            const selector = document.getElementById('language-selector');
+            for (const lang in i18nData) {
+                const option = document.createElement('option');
+                option.value = lang;
+                option.textContent = i18nData[lang].nav_home; 
+                selector.appendChild(option);
+            }
+        });
+    </script>
+</body>
+</html>
