@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="hero_title">免费在线 PDF 工具箱 - 极致隐私保护</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="logo">⚡ PDFTools</a>
+        <div class="nav-controls">
+            <select id="language-selector">
+                <option value="zh">中文 (简体)</option>
+                <option value="en">English</option>
+                <option value="es">Español</option>
+                <option value="fr">Français</option>
+                <option value="de">Deutsch</option>
+                <option value="ja">日本語</option>
+                <option value="ko">한국어</option>
+                <option value="pt">Português</option>
+            </select>
+        </div>
+    </nav>
+
+    <main>
+        <div class="hero">
+            <h1 data-i18n="hero_title">免费在线 PDF 工具箱 - 极致隐私保护</h1>
+            <p data-i18n="hero_desc">无需上传服务器，直接在浏览器中安全地转换、合并、拆分和压缩 PDF 文件。</p>
+        </div>
+
+        <div class="tools-grid">
+            <a href="tools/pdf-to-word.html" class="tool-card">
+                <span class="tool-icon">📄 &rarr; 📝</span>
+                <div class="tool-title" data-i18n="tools.pdf_to_word.title">PDF 转 Word</div>
+                <div class="tool-desc" data-i18n="tools.pdf_to_word.desc">将 PDF 文档精准转换为可编辑的 Word 文件。</div>
+            </a>
+            <a href="tools/word-to-pdf.html" class="tool-card">
+                <span class="tool-icon">📝 &rarr; 📄</span>
+                <div class="tool-title" data-i18n="tools.word_to_pdf.title">Word 转 PDF</div>
+                <div class="tool-desc" data-i18n="tools.word_to_pdf.desc">将 DOC/DOCX 文档转换为专业 PDF 格式。</div>
+            </a>
+            <a href="tools/pdf-merge.html" class="tool-card">
+                <span class="tool-icon">📑 + 📑</span>
+                <div class="tool-title" data-i18n="tools.merge.title">PDF 合并</div>
+                <div class="tool-desc" data-i18n="tools.merge.desc">将多个 PDF 文件快速合并为一个完整文档。</div>
+            </a>
+            <a href="tools/pdf-split.html" class="tool-card">
+                <span class="tool-icon">✂️📄</span>
+                <div class="tool-title" data-i18n="tools.split.title">PDF 拆分</div>
+                <div class="tool-desc" data-i18n="tools.split.desc">提取特定页面或将 PDF 分割为多个文件。</div>
+            </a>
+            <a href="tools/pdf-compress.html" class="tool-card">
+                <span class="tool-icon">🗜️</span>
+                <div class="tool-title" data-i18n="tools.compress.title">PDF 压缩</div>
+                <div class="tool-desc" data-i18n="tools.compress.desc">在保持画质清晰的同时大幅减小文件体积。</div>
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="seo-section">
+            <!-- SEO 优化文章 (博客风格) -->
+            <div class="seo-block">
+                <div class="seo-title">SEO 优化文章: 为什么使用在线 PDF 工具</div>
+                <div id="seo-article-content">
+                    <!-- JS 将在这里动态注入长篇 SEO 文章 -->
+                </div>
+            </div>
+
+            <!-- GEO 多地区文章 -->
+            <div class="seo-block">
+                <div class="seo-title">GEO 多地区文章: 全球用户场景分析</div>
+                <div id="geo-articles-grid" class="geo-grid">
+                    <!-- JS 将在这里动态注入 12 个地区卡片 -->
+                </div>
+            </div>
+            
+            <!-- 免责声明 -->
+            <div id="disclaimer-text" class="disclaimer"></div>
+        </div>
+    </footer>
+
+    <script src="i18n.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
